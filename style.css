@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+   margin: 10px 0px;
+}
+
+.content-wrapper {
+    max-width: 90vw;
+    margin: auto;
+  }
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    color: #FBB3A5;
+}
+.line-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.line{
+    padding: 1px;
+    background-color: black;
+    width: 200px;
+    border-radius: 4px; 
+}
+.header{
+     height: 50px;
+    background-color: #5a6069;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  
+}
+.main-container{
+    /* display: flex; */
+    position: relative;
+
+}
+
+
+
+.main-container img{
+    height: 70vh;
+    width: 100%;
+}
+
+
+
+.main-container .about-pattern{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 24px;
+
+}
+
+.main-container .about-pattern .text-to-show{
+    display: none;
+
+}
+
+.main-container .about-pattern:hover{
+
+    /* background-color: rgba(0,0,0,0.6); */
+    background-color: rgba(223, 165, 165, 0.8);
+    cursor: pointer;
+
+}
+
+.main-container .about-pattern:hover > .text-to-show{
+    display: inline;
+    color: blue;
+    font-weight: 600;
+    cursor: pointer;
+
+
+}
+
+.desc-container{
+    font-size:18px ;
+    border: 1px solid #ccc;
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: 300px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.desc-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  .desc-container::-webkit-scrollbar-thumb {
+    background: rgb(5, 83, 134); 
+    border-radius: 10px;
+  }
+  .desc-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  .desc-container::-webkit-scrollbar-thumb:hover {
+    background: #43b80c; 
+    cursor: pointer;
+  }
+  .inner-desc{
+    padding: 20px;
+   font-size: 18px;
+  }
+  .dot-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    
+  }
+.dot{ 
+    margin-right: 5px;
+    height: 1px;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: blue;
+}
+.create-container{
+    background-color: #ccc;
+    height: 40px;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.create-container .create{
+    padding-top: 10px;
+}
+.create-container .create:hover{
+cursor: pointer;
+}
+.define-methodes{
+    margin-bottom: 20px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+th{
+    background-color: #dddddd49;  
+}
+.examples{
+    margin-top: 30px;
+}
+
+#message {
+    padding: 5px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.label{
+    margin-left: 5px;
+}
+input{
+    padding: 10px;
+    width: 30%;
+    overflow: hidden;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background-color: #ccc;
+}
+.line-container{
+    display: flex;
+    justify-content: start;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.line{
+    padding: 1px;
+    background-color: rgb(241, 166, 166);
+    width:99%;
+    border-radius: 4px; 
+}
+
+.example-method{
+    padding: 20px;
+    background-color: rgba(204, 204, 204, 0.295);
+    width: 96%;
+    margin-bottom: 20px;
+}
+.example-method:hover{
+cursor: pointer;
+}
+#message2{
+padding: 10px;
+font-size: 18px;
+
+}
+.str{
+    padding: 5px;
+}

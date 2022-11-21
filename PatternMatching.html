@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>  
+</head>
+<body> 
+    <div class="header">
+        <div class="title">Pattern Matching</div>
+    </div>
+
+    <div class="main-container">
+
+        <img src="/img/Technology in Education Technology Presentation in Blue Peach Illustrative Style.jpg" alt="img">
+
+        <div class="about-pattern">
+            <span class="text-to-show">
+                 These patterns are used with the exec() and test() <br/>
+                 methods of RegExp, and with the match(), matchAll(), replace(), replaceAll(), search(), <br/>
+                 and split() methods of String. <br/>
+            </span>
+        </div>
+
+    </div>
+    <div class="desc-container content-wrapper">
+      <div class="inner-desc">
+        <span>
+            <h1>Creating a regular expression</h1>
+            <div >You construct a regular expression in one of two ways:</div>
+            <div class="dot-container">
+                <div class="dot"></div>
+                <div>Using a regular expression literal, which consists of a pattern enclosed between slashes, as follows:</div>
+            </div>
+            <div class="create-container">
+                <span class="create">
+                    <b>const</b> <b style="color: blue;">re</b> = /ab+c/;
+                </span>
+            </div>
+            <div>
+                Regular expression literals provide compilation of the regular expression when the script is loaded. If the regular expression remains constant, using this can improve performance.
+            </div>
+            <div class="dot-container">
+                <div class="dot"></div>
+                <div>Or calling the constructor function of the RegExp object, as follows:</div>
+            </div>
+            <div class="create-container">
+                <span class="create">
+                    <b>const</b> re = new <b style="color: red;">RegExp</b>('ab+c');
+                </span>
+            </div>
+            <div class="define-methodes">
+                <h1>Using regular expressions in JavaScript</h1>
+               <div>Regular expressions are used with the RegExp methods <b style="color:blue ;">test()</b>  and <b style="color:blue ;">exec()</b> 
+                and with the String methods 
+                <b style="color:blue ;">match()</b>, <b style="color:blue ;">replace()</b>, 
+                <b style="color:blue ;">search()</b>, and <b style="color:blue ;">split()</b>.
+            </div>
+            <div class="table">
+                <table>
+                    <tr>
+                      <th>Method</th>
+                      <th>What it Does</th>
+                    </tr>
+                    <tr>
+                      <td>exec()</td>
+                      <td>	Search for a match in a string. It returns an array of information or null on mismatch.</td>
+                    </tr>
+                    <tr>
+                      <td>test()</td>
+                      <td>Test whether a string matches a pattern. It returns true or false.</td>
+                    </tr>
+                    <tr>
+                      <td>search()</td>
+                      <td>Search for a match within a string. It returns the index of the first match, or -1 if not found.</td>
+                    </tr>
+                    <tr>
+                      <td>replace()</td>
+                      <td>Search for a match in a string, and replaces the matched substring with a replacement string.</td>
+                    </tr>
+                    <tr>
+                      <td>match()</td>
+                      <td>	Search for a match in a string. It returns an array of information or null on mismatch.</td>
+                    </tr>
+                    <tr>
+                      <td>split()</td>
+                      <td>Splits up a string into an array of substrings using a regular expression.</td>
+                    </tr>
+                  </table>
+            </div>
+
+            <div class="define-methodes">
+                <h1>Character Classes</h1>
+              <div>Square brackets surrounding a pattern of characters are called a character class e.g. [abc].
+                 A character class always matches a single character out of a list of specified characters that
+                  means the expression [abc] matches only a, b or c character.
+                </div>
+                <table>
+                    <tr>
+                      <th>RegExp</th>
+                      <th>What it Does</th>
+                    </tr>
+                    <tr>
+                      <td>[abc]</td>
+                      <td>Matches any one of the characters a, b, or c.</td>
+                    </tr>
+                    <tr>
+                      <td>[^abc]</td>
+                      <td>Matches any one character other than a, b, or c.</td>
+                    </tr>
+                    <tr>
+                      <td>[a-z]</td>
+                      <td>Matches any one character from lowercase a to lowercase z.</td>
+                    </tr>
+                    <tr>
+                      <td>[A-Z]</td>
+                      <td>Matches any one character from uppercase a to uppercase z.</td>
+                    </tr>
+                    <tr>
+                      <td>[a-Z]</td>
+                      <td>	Matches any one character from lowercase a to uppercase Z.</td>
+                    </tr>
+                    <tr>
+                      <td>[0-9]</td>
+                      <td>	Matches a single digit between 0 and 9.</td>
+                    </tr>
+                    <tr>
+                        <td>[a-z0-9]</td>
+                        <td>Matches a single character between a and z or between 0 and 9.</td>
+                      </tr>
+                  </table>
+            </div>
+            <div class="define-mathods">
+                <h1>Predefined Character Classes </h1>
+                <div>
+                    Some character classes such as digits, letters, and whitespaces are used so frequently that there are 
+                    shortcut names for them. The following table lists those predefined character classes:
+                </div>
+                <table>
+                    <tr>
+                      <th>Shortcut</th>
+                      <th>What it Does</th>
+                    </tr>
+                    <tr>
+                      <td>.</td>
+                      <td>Matches any single character except newline \n.</td>
+                    </tr>
+                    <tr>
+                      <td>\d</td>
+                      <td>matches any digit character. Same as [0-9]</td>
+                    </tr>
+                    <tr>
+                      <td>\D</td>
+                      <td>Matches any non-digit character. Same as [^0-9].</td>
+                    </tr>
+                    <tr>
+                      <td>\s</td>
+                      <td>Matches any whitespace character (space, tab, newline or carriage return character).
+                        Same as [ \t\n\r]</td>
+                    </tr>
+                    <tr>
+                      <td>\S</td>
+                      <td>Matches any non-whitespace character.
+                        Same as [^ \t\n\r]</td>
+                    </tr>
+                    <tr>
+                      <td>\w</td>
+                      <td>Matches any word character (definned as a to z, A to Z,0 to 9, and the underscore).
+                        Same as [a-zA-Z_0-9].</td>
+                    </tr>
+                    <tr>
+                        <td>\W</td>
+                        <td>Matches any non-word character. Same as [^a-zA-Z_0-9]</td>
+                      </tr>
+                  </table>
+            </div>
+
+            <div class="define-mathods">
+                <h1>Repetition Quantifiers</h1>
+               <div>
+                In the previous section we've learnt how to match a single character in a variety of fashions.
+                 But what if you want to match on more than one character? For example, let's say you want to 
+                 find out words containing one or more instances of the letter p, or words containing at least 
+                 two p's, and so on.<br/>
+
+                 This is where quantifiers come into play. With quantifiers you can specify how many times a character in a regular
+                expression should match. Quantifiers can be applied to the individual characters, as well as classes of characters,
+                and groups of characters contained by the parentheses.<br/>
+
+                The following table lists the various ways to quantify a particular pattern:
+               </div>
+                
+               <table>
+                <tr>
+                  <th>RegExp</th>
+                  <th>What it Does</th>
+                </tr>
+                <tr>
+                  <td>p+</td>
+                  <td>Matches one or more occurrences of the letter p.</td>
+                </tr>
+                <tr>
+                  <td>p*</td>
+                  <td>Matches zero or more occurrences of the letter p.</td>
+                </tr>
+                <tr>
+                  <td>p?</td>
+                  <td>	Matches zero or one occurrences of the letter p.</td>
+                </tr>
+                <tr>
+                  <td>p{2}</td>
+                  <td>Matches exactly two occurrences of the letter p.</td>
+                </tr>
+                <tr>
+                  <td>p{2,3}</td>
+                  <td>Matches at least two occurrences of the letter p, but not more than three occurrences.</td>
+                </tr>
+                <tr>
+                  <td>p{2,}</td>
+                  <td>Matches two or more occurrences of the letter p..</td>
+                </tr>
+                <tr>
+                    <td>p{,3}</td>
+                    <td>Matches at most three occurrences of the letter p</td>
+                  </tr>
+              </table>
+
+            </div>
+
+            <div class="define-mathods">
+                <h1>Position Anchors</h1>
+               <div>
+                There are certain situations where you want to match at the beginning or end of a line, word, or string. 
+                 To do this you can use anchors. Two common anchors are caret (^)
+                 which represent the start of the string, and the dollar ($) sign which represent the end of the string.
+               </div>
+               <table>
+                <tr>
+                  <th>RegExp</th>
+                  <th>What it Does</th>
+                </tr>
+                <tr>
+                  <td>^p</td>
+                  <td>Matches the letter p at the beginning of a line..</td>
+                </tr>
+                <tr>
+                  <td>p$</td>
+                  <td>Matches the letter p at the end of a line.</td>
+                </tr>
+                
+              </table>
+            </div>
+
+            <div class="define-mathods">
+                <h1>Pattern Modifiers (Flags)</h1>
+               <div>
+                A pattern modifier allows you to control the way a pattern match is handled. 
+                Pattern modifiers are placed directly after the regular expression, for example,
+                 if you want to search for a pattern in a case-insensitive manner,
+                  you can use the i modifier, like this: /pattern/i.
+                The following table lists some of the most commonly used pattern modifiers.
+               </div>
+               <table>
+                <tr>
+                  <th>Modifier</th>
+                  <th>What it Does</th>
+                </tr>
+                <tr>
+                  <td>g</td>
+                  <td>Perform a global match i.e. finds all occurrences.</td>
+                </tr>
+                <tr>
+                  <td>i</td>
+                  <td>Makes the match case-insensitive manner.</td>
+                </tr>
+                <tr>
+                  <td>m</td>
+                  <td>Changes the behavior of ^ and $ to match against a newline boundary 
+                    (i.e. start or end of each line within a multiline string), instead of a string boundary.</td>
+                </tr>
+                <tr>
+                  <td>o</td>
+                  <td>Evaluates the expression only once.</td>
+                </tr>
+                <tr>
+                  <td>s</td>
+                  <td>Changes the behavior of . (dot) to match all characters, including newlines.</td>
+                </tr>
+                <tr>
+                  <td>x</td>
+                  <td>Allows you to use whitespace and comments within a regular expression for clarity.</td>
+                </tr>
+              </table>
+               </div>
+
+        </span>
+
+      </div>
+        
+    </div>
+
+
+       
+    </div>
+    <div class="examples content-wrapper">
+        <h1 style="color: #f16043;">Examples</h1>
+        <div class="line-container">
+            <div class="line"></div>
+          </div>
+        <form class="form-container" action="https://www.instagram.com/bhat__ashu/">
+            <div class="input-label-container">
+                <div class="label"><label><b>Email</b></label> </div>
+             <div><input onchange="checkEmail(this.value)" onfocus="emailerror()" type="text" placeholder="someone@example.com" name="email" id="email" required></div> 
+               <div  id = "message" style="color:red"></div>
+              </div>
+              <!-- <div class="btn-container">
+                <button type="submit" class="registerbtn">Register</button>
+              </div> -->
+        </form>
+        <div class="example-method">
+      
+            <b> function <b style="color: red;">checkEmail(str)</b></b><br/>
+              {<br/>
+            
+              <b>var</b>  <b style="color: red;">re</b> =<b style="color: blue;">  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ </b> ;<br/>
+               <b> if<b style="color: red;">(!re.test(str))</b></b> <br/>
+        
+               <b style="color: rgb(128, 56, 56);"> document.getElementById("message").innerHTML = "Please enter a valid email address"; </b> <br/>
+   
+               }<br/>
+             
+               <b style="color: rgb(255, 0, 242);">  function emailerror()</b>{<br/>
+                <b style="color: rgb(80, 21, 21);"> document.getElementById("message").innerHTML = " "; </b> <br/>
+               }<br/>
+
+        </div>
+        <form class="form-container" action="https://www.instagram.com/bhat__ashu/">
+            <div class="input-label-container">
+                <div class="label"><label><b>Search()</b></label> </div>
+                <div class="str">Hello world!! This is Educative</div>
+             <div><input onchange="checkStr(this.value)" onfocus="ferror()" type="text" placeholder="" required></div> 
+               <div  id = "message2" style="color:red"></div>
+               <div  id = "message3" style="color:red"></div>
+              </div>
+              <div class="example-method">
+      
+                <b> function <b style="color: red;">checkStr(str)</b></b><br/>
+                  {<br/>
+                
+                  <b>var</b>  <b style="color: red;">stri</b> =<b style="color: blue;"> "Hello world!! This is Educative"</b> ;<br/>
+                   <b> if<b style="color: red;">( stri.search(str) != -1 )</b></b> <br/>
+            
+                   <b style="color: rgb(128, 56, 56);">     document.getElementById("message2").innerHTML = "Matching." + str + " at " + stri.indexOf(str);  
+                </b> <br/>
+       
+                   }<br/>
+                    <b>else</b><br/>
+                    {<br/>
+                        <b style="color: rgb(150, 28, 28);">  document.getElementById("message2").innerHTML = " Not matching." + stri.indexOf(str); </b> <br/>  
+                    }<br/>
+                   <b style="color: rgb(255, 0, 242);">  function emailerror()</b>{<br/>
+                    <b style="color: rgb(80, 21, 21);"> document.getElementById("message").innerHTML = " "; </b> <br/>
+                   }<br/>
+    
+            </div>
+            
+    </div>
+    
+   
+    
+  
+    
+    
+</body>
+</html>
